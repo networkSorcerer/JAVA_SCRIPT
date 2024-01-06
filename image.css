@@ -1,0 +1,35 @@
+.thumnail {
+    list-style : none;
+    width : 120px;
+    float :  left;
+}
+
+.thumahil li {
+    width: 100px;
+    height: 100px;
+    padding: 5px 10px;
+}
+
+.thumnail img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.view {
+    float:left;
+    width: 520px;
+    height: 340px;
+}
+
+.newView {
+    clear: both;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.view img, p img {
+    width: 500px;
+    height: 320px;
+    margin: 5px 10px
+}

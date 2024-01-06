@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 그리기</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>표 그리기</h2>
+
+    <label for="rows">행 수:</label>
+    <input type="number" id="rows" min="1" value="3">
+    
+    <label for="columns">열 수:</label>
+    <input type="number" id="columns" min="1" value="3">
+    
+    <button onclick="drawTable()">표 그리기</button>
+
+    <div id="tableContainer"></div>
+
+    <script>
+        function drawTable() {
+            // 사용자가 입력한 행과 열의 개수 가져오기
+            var rows = parseInt(document.getElementById("rows").value);
+            var columns = parseInt(document.getElementById("columns").value);
+
+            // 표 그리기
+            var tableHtml = "<table>";
+
+            // 첫 번째 행은 헤더로 만들기
+            tableHtml += "<tr>";
+            for (var j = 1; j <= columns; j++) {
+                tableHtml += "<th>헤더 " + j + "</th>";
+            }
+            tableHtml += "</tr>";
+
+            // 나머지 행은 데이터로 만들기
+            for (var i = 1; i <= rows; i++) {
+                tableHtml += "<tr>";
+                for (var j = 1; j <= columns; j++) {
+                    tableHtml += "<td>데이터 " + i + "-" + j + "</td>";
+                }
+                tableHtml += "</tr>";
+            }
+
+            tableHtml += "</table>";
+
+            // 결과를 화면에 표시
+            document.getElementById("tableContainer").innerHTML = tableHtml;
+        }
+    </script>
+</body>
+</html>

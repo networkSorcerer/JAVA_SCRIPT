@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        input[type="text"] {
+            border-width: 0px;
+            width: 150px;
+            height : 60px;
+            font-size: 24px;
+        }
+        #target {
+            width: 550px;
+            font-size : 32px;
+            font-weight: bold;
+            line-height: 2em;
+        }
+    </style>
+    <script src="/htmlexample/basic/window.js"></script>
+</head>
+<body>
+    <h1>window 객체</h1>
+    <h3>open 메소드 확인</h3>
+    <div>
+        <button type="button" id="openBtn">Open a page with new window</button>
+        <button type="button" id="closeBtn">Close the window</button>
+    </div>
+
+    <h3>setTimeout 메소드 확인</h3>
+    <p>버튼을 누르면 3초 후에 알림창이 화면에 표시됩니다</p>
+    <button type="button" id="btn1">눌러보세요</button>
+    
+    <form name="form1">
+        <input type="text" name="result" id="result" /><br/>
+        <button type="button" id="btn2">시계동작</button>
+        <button type="button" id="btn3">시계중지</button>
+    </form>
+
+    <h3>setInterval 메소드 확인</h3>
+    <div id="target">
+        <p>노력은 절대 배신하지 않는다~!!</p>
+
+    </div>
+    <button type="button" id="btn4">시작</button>
+    <button type="button" id="btn5" disabled>중지</button>
+</body>
+</html>
